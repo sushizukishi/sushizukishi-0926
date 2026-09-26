@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#fbf7f2">
-  <meta name="description" content="幼少期から現在までのモチベーションの波を描いて振り返るアプリ。データは端末の中だけに保存されます。">
+  <meta name="description" content="幼少期から現在までのモチベーションの波を描き、経験・感情から自分の価値観を見つけるアプリ。データは端末の中だけに保存されます。">
   <title>モチベーショングラフ</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,6 +17,7 @@
 
   <main class="app">
     <section class="chart-section" aria-label="モチベーショングラフ">
+      <div class="focus-bar" id="focus-bar" hidden></div>
       <div class="chart-wrap" id="chart-wrap">
         <div id="chart"></div>
         <div class="popup" id="popup" hidden></div>
@@ -36,11 +37,11 @@
 
   <div class="intro" id="intro" hidden>
     <div class="intro-card" role="dialog" aria-modal="true" aria-labelledby="intro-title">
-      <h2 id="intro-title">人生のモチベーションを<br>グラフにしてみよう</h2>
+      <h2 id="intro-title">人生のモチベーションの波から<br>大切にしている価値観を見つけよう</h2>
       <ol>
-        <li>幼少期から今まで、時期ごとに思い出した出来事を登録します</li>
-        <li>そのときの気持ちをスライダーで選ぶだけ。メモは書けたらでOK</li>
-        <li>登録するたびにグラフが伸びていきます</li>
+        <li><strong>経験</strong>：幼少期から今まで、時期ごとに思い出した出来事を登録します。モチベーションはスライダーで選ぶだけ</li>
+        <li><strong>感情</strong>：そのときの気持ちをタップで選びます（任意）</li>
+        <li><strong>価値観</strong>：何が満たされていたか・損なわれていたかを選ぶと、最後にあなたの価値観の候補が見えてきます</li>
       </ol>
       <p class="intro-note">ログイン不要。内容はこの端末の中だけに保存され、誰にも送信されません。途中で閉じても大丈夫です。</p>
       <button type="button" class="primary-btn" id="intro-start">はじめる</button>
