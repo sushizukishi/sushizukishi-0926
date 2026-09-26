@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta name="description" content="幼少期から現在までのモチベーションの波を描いて振り返るアプリ。データは端末の中だけに保存されます。">
+  <title>モチベーショングラフ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>モチベーショングラフ</h1>
+    <button type="button" class="link-btn" id="help-btn">使い方</button>
+  </header>
+
+  <main class="app">
+    <section class="chart-section" aria-label="モチベーショングラフ">
+      <div class="chart-wrap" id="chart-wrap">
+        <div id="chart"></div>
+        <div class="popup" id="popup" hidden></div>
+      </div>
+      <div class="data-actions">
+        <button type="button" class="chip-btn" id="save-png">画像で保存</button>
+        <button type="button" class="chip-btn" id="export-json">データを書き出す</button>
+        <button type="button" class="chip-btn" id="import-json">データを読み込む</button>
+        <input type="file" id="import-file" accept=".json,application/json" hidden>
+      </div>
+    </section>
+
+    <section class="panel" id="panel" aria-live="polite"></section>
+  </main>
+
+  <p class="privacy-note">入力した内容はこの端末のブラウザの中だけに保存され、外部には送信されません。</p>
+
+  <div class="intro" id="intro" hidden>
+    <div class="intro-card" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+      <h2 id="intro-title">人生のモチベーションを<br>グラフにしてみよう</h2>
+      <ol>
+        <li>幼少期から今まで、時期ごとに思い出した出来事を登録します</li>
+        <li>そのときの気持ちをスライダーで選ぶだけ。メモは書けたらでOK</li>
+        <li>登録するたびにグラフが伸びていきます</li>
+      </ol>
+      <p class="intro-note">ログイン不要。内容はこの端末の中だけに保存され、誰にも送信されません。途中で閉じても大丈夫です。</p>
+      <button type="button" class="primary-btn" id="intro-start">はじめる</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
